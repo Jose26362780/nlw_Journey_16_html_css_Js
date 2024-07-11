@@ -13,7 +13,7 @@ Aplicação desenvolvida no NLW Journey da Rocketseat na trilha HTML+CSS+JS.
 O projeto é um site responsivo para montar um roteiro de viagem, cadastrando atividades.
 Esse é um dos projetos do evento NLW Journey, um dos conteúdos disponíveis para alunos da Rocketseat.
 
-![preview](.github/cover.png)
+![preview](.github/preview.png)
 
 ##  Tecnologias usadas no projeto
 
