@@ -21,6 +21,9 @@ Esse é um dos projetos do evento NLW Journey, um dos conteúdos disponíveis pa
 ![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+## Link da aplicação
+
+👉🏼[Clique aqui para accessar](https://nlw-16-journey-fundamentos.netlify.app/)
 
 
 ## 🔗 Deploy 
