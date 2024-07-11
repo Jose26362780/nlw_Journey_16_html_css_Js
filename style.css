@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --button-enabled:#BEF264;
+  --button-disabled:#1A2E05;
+
+  --color-text-:#FAFAFA;
+  --color-gray-:#F4F4F5;
+  --color-gray-:#A1A1AA;
+  --color-gray-:#71717A;
+
+  --color-gray-scale:#3F3F46;
+  --color-gray-border:#27272A;
+  --color-card-bg:#18181B;
+  --color-background:#09090B;
+
+
+}
+
+html, input, select, button, option {
+  background-color: var(--color-background);
+  color: var(--color-text-);
+  font-family: 'Inter', sans-serif;
+ 
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+#app {
+  padding: 4rem 2rem;
+  max-width: 32rem;
+  margin: auto;
+}
+
+
+/* form */
+#place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 2.2rem 1.6rem;
+
+  font-size: 1.4rem;
+  margin-bottom:3.2rem;
+}
+
+input, select {
+  all: unset;
+}
+
+input, select, button {
+  width: 100%;
+}
+
+
+.fields {
+  display: grid;
+  gap: 8px;
+}
+
+
+.field-wrapper {
+  padding: 1.8rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-gray-border);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.field-wrapper:focus-within {
+  outline: 2px solid var(--button-enabled);
+}
+
+button {
+  margin-top: 1.2rem;
+  border: none;
+  padding: 1.2rem 2rem;
+  background-color: var(--button-enabled);
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 1.6rem;
+
+  color: var(--button-disabled);
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+.card-bg {
+  background: var(--color-card-bg);
+
+  box-shadow: 
+    0px 8px 8px rgba(0, 0, 0, 0.1), 
+    0px 4px 4px rgba(0, 0, 0, 0.1), 
+    0px 2px 2px rgba(0, 0, 0, 0.1), 
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1), 
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+
+  border-radius: 1.2rem;
+}
+
+/* main */
+main {
+  margin-top: 3.2rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.4rem;
+
+  margin-bottom: 2.4rem;
+}
+
+section {
+  display: grid;
+  gap: 1rem;
+}
+
+section input[type="checkbox"] {
+  position: absolute;
+  inset: 0;
+}
+
+section .card-bg {
+  position: relative;
+  padding: 1rem 1.6rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 500ms;
+}
+
+.card-bg:hover{
+  transform: scale(1.05);
+}
+
+section .card-bg:has(:checked) .active,
+section .card-bg .inactive {
+  display: block;
+}
+
+
+
+section .card-bg:has(:checked) .inactive,
+section .card-bg .active {
+  display: none;
+}
+
+section .card-bg > div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  
+}
+
+time {
+  font-size: 1.4rem;
+  color: #A1A1AB;
+  text-align: right;
+}
+
+time.full {
+  display: none;
+}
+
+@media (width > 1024px) {
+  #app {
+    display: flex;
+    max-width: 96rem;
+    gap: 3.2rem;
+  }
+
+  main {
+    margin-top: 0;
+    flex: 1;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  time.full {
+    display: block;
+  }
+
+  time.short {
+    display: none;
+  }
+}
+
+section .card-bg {
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
